@@ -32,6 +32,96 @@ interface VerificationResult {
   completedAt?: string;
 }
 
+// Landing page
+app.get('/', (req, res) => {
+  res.send(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proof-of-Agent | MoltLaunch</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+      color: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container { max-width: 600px; text-align: center; }
+    h1 { font-size: 2.5rem; margin-bottom: 8px; }
+    .accent { color: #22d3ee; }
+    .subtitle { color: #a1a1aa; margin-bottom: 32px; font-size: 1.1rem; }
+    .card { background: #27272a; border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: left; }
+    .card h3 { color: #22d3ee; margin-bottom: 12px; }
+    code { background: #09090b; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; }
+    pre { background: #09090b; padding: 16px; border-radius: 8px; overflow-x: auto; margin-top: 12px; font-size: 0.85rem; }
+    .endpoints { list-style: none; }
+    .endpoints li { padding: 8px 0; border-bottom: 1px solid #3f3f46; }
+    .endpoints li:last-child { border: none; }
+    .method { display: inline-block; width: 60px; color: #4ade80; font-weight: 600; }
+    .stats { display: flex; gap: 24px; justify-content: center; margin-bottom: 24px; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: #22d3ee; }
+    .stat-label { font-size: 0.85rem; color: #71717a; }
+    a { color: #22d3ee; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { margin-top: 32px; color: #71717a; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 <span class="accent">Proof-of-Agent</span></h1>
+    <p class="subtitle">Verification API for AI Agent Token Launches</p>
+    
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">${verifications.size}</div>
+        <div class="stat-label">Verifications</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">v1.0</div>
+        <div class="stat-label">Version</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3>API Endpoints</h3>
+      <ul class="endpoints">
+        <li><span class="method">POST</span> <code>/api/verify</code> — Submit agent for verification</li>
+        <li><span class="method">GET</span> <code>/api/status/:id</code> — Check verification status</li>
+        <li><span class="method">GET</span> <code>/api/score/:agentId</code> — Get agent score</li>
+        <li><span class="method">GET</span> <code>/api/verifications</code> — List all verifications</li>
+        <li><span class="method">GET</span> <code>/api/health</code> — Health check</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>Quick Start</h3>
+      <pre>curl -X POST ${req.protocol}://${req.get('host')}/api/verify \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "agentName": "MyAgent",
+    "apiEndpoint": "https://my-agent.com/api",
+    "capabilities": ["trading", "analysis"]
+  }'</pre>
+    </div>
+    
+    <p class="footer">
+      Part of <a href="https://web-production-419d9.up.railway.app">MoltLaunch</a> — 
+      AI Agent Launchpad on Solana
+    </p>
+  </div>
+</body>
+</html>
+  `);
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({

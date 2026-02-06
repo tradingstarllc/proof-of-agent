@@ -1,6 +1,6 @@
 {
   "name": "@moltlaunch/proof-of-agent",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Verify AI agents actually work before you trust them",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

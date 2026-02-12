@@ -134,7 +134,7 @@ await client.submitTrace('my-trading-bot', {
 
 ### Hosted API
 
-Base URL: `https://web-production-419d9.up.railway.app`
+Base URL: `https://youragent.id`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -265,7 +265,7 @@ if (score.score < 60) {
 ```html
 <!-- Embed verification widget -->
 <iframe 
-  src="https://web-production-419d9.up.railway.app/badge/my-agent"
+  src="https://youragent.id/badge/my-agent"
   width="200" 
   height="100"
 ></iframe>
@@ -287,9 +287,9 @@ if (score.score < 60) {
 
 ## Links
 
-- **MoltLaunch API**: https://web-production-419d9.up.railway.app
-- **skill.md**: https://web-production-419d9.up.railway.app/skill.md
-- **Dashboard**: https://web-production-419d9.up.railway.app/dashboard.html
+- **MoltLaunch API**: https://youragent.id
+- **skill.md**: https://youragent.id/skill.md
+- **Dashboard**: https://youragent.id/dashboard.html
 - **GitHub**: https://github.com/tradingstarllc/proof-of-agent
 - **On-Chain AI**: [Devnet Explorer](https://explorer.solana.com/address/FHcy35f4NGZK9b6j5TGMYstfB6PXEtmNbMLvjfR1y2Li?cluster=devnet)
 

@@ -142,15 +142,15 @@ const proof = await ml.generateProof("my-agent", { threshold: 60 });</pre>
     </div>
     
     <div class="links">
-      <a href="https://web-production-419d9.up.railway.app">🌐 Main Site</a>
-      <a href="https://web-production-419d9.up.railway.app/pitch.html">📊 Pitch</a>
-      <a href="https://web-production-419d9.up.railway.app/skill.md">📄 skill.md</a>
+      <a href="https://youragent.id">🌐 Main Site</a>
+      <a href="https://youragent.id/pitch.html">📊 Pitch</a>
+      <a href="https://youragent.id/skill.md">📄 skill.md</a>
       <a href="https://github.com/tradingstarllc/solana-agent-protocol">📋 SAP Spec</a>
       <a href="https://www.npmjs.com/package/@moltlaunch/sdk">📦 npm</a>
     </div>
     
     <p class="footer">
-      <a href="https://web-production-419d9.up.railway.app">MoltLaunch</a> — Solana Agent Validation Protocol<br>
+      <a href="https://youragent.id">MoltLaunch</a> — Solana Agent Validation Protocol<br>
       <a href="https://github.com/tradingstarllc/solana-agent-protocol">SAP Spec</a> · 
       <a href="https://github.com/solana-foundation/SRFCs/discussions/9">sRFC #9</a> · 
       <a href="https://github.com/tradingstarllc/moltlaunch">GitHub</a><br>

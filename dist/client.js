@@ -17,7 +17,7 @@ class PoAClient {
         const baseUrl = options.baseUrl ||
             (options.network === 'mainnet'
                 ? 'https://api.moltlaunch.com' // Future mainnet
-                : 'https://web-production-419d9.up.railway.app');
+                : 'https://youragent.id');
         this.http = axios_1.default.create({
             baseURL: baseUrl,
             timeout: 120000, // 2 min for deep verification

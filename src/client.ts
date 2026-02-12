@@ -96,7 +96,7 @@ export class PoAClient {
     const baseUrl = options.baseUrl || 
       (options.network === 'mainnet' 
         ? 'https://api.moltlaunch.com'  // Future mainnet
-        : 'https://web-production-419d9.up.railway.app');
+        : 'https://youragent.id');
 
     this.http = axios.create({
       baseURL: baseUrl,

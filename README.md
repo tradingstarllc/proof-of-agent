@@ -1,3 +1,5 @@
+> ⚠️ **DEPRECATED:** This package is from MoltLaunch V1 (STARK proof era). The current SDK is `@moltlaunch/sdk` v3.0.0. See https://github.com/tradingstarllc/moltlaunch-sdk
+
 # Proof-of-Agent (PoA) SDK
 
 **Verify AI agents actually work before you trust them.**

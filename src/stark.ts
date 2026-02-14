@@ -1,4 +1,12 @@
 /**
+ * @deprecated This module uses simplified Poseidon hashing with non-standard constants.
+ * It does NOT provide real STARK proofs or cryptographic security.
+ * Use moltlaunch-site/stark-prover/ for the real implementation with FRI protocol.
+ * 
+ * Kept for backward compatibility only. Do not use for new integrations.
+ */
+
+/**
  * STARK Proof Generation for Privacy-Preserving Verification
  * Uses M31 field (Mersenne-31) and Poseidon hash
  */
@@ -217,9 +225,9 @@ export function generateStarkProof(inputs: CircuitInputs): StarkProof {
       timestampVerified: inputs.timestamp
     },
     metadata: {
-      prover: 'moltlaunch-stark-v1',
+      prover: 'moltlaunch-stark-v1-DEPRECATED',
       field: 'M31',
-      security: 128
+      security: 0
     }
   };
 }
